@@ -63,3 +63,5 @@ The Hong Kong Mark Six lottery draws 6 numbers (from 1 to 49) and an extra numbe
 ## Disclaimer
 
 This project is for educational and research purposes only. Lottery outcomes are random, and past trends do not influence future draws.
+
+Some content in this project was generated with the assistance of AI tools. While accuracy and clarity have been prioritized, users are encouraged to independently verify any critical information.
