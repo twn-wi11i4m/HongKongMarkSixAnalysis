@@ -10,6 +10,39 @@ MAX_END_DATE = datetime.now().strftime("%Y-%m-%d")
 
 # Type alias for a lottery draw
 LotteryDraw = NewType("LotteryDraw", Dict[str, Any])
+"""
+The structure of LotteryDraw is as follows:
+{
+    "id": str,
+    "year": str,
+    "no": int,
+    "openDate": str,    # e.g. "2023-10-25+08:00"
+    "closeDate": str,   # e.g. "2023-10-25T21:15:00+08:00"
+    "drawDate": str,    # e.g. "2023-10-25+08:00"
+    "status": str,
+    "snowballCode": Optional[str],  # 金多寶
+    "snowballName_en": Optional[str],
+    "snowballName_ch": Optional[str],
+    "lotteryPool": {
+        "sell": bool
+        "status": str,
+        "totalInvestment": str, # e.g. "1234567890"
+        "jackpot": str,        # e.g. "1234567890"
+        "unitBet": str,        # e.g. "10"
+        "estimatedPrize": str,  # e.g. "1234567890"
+        "derivedFirstPrizeDiv": str, # e.g. "1234567890"
+        "lotteryPrizes": List[{
+            "type": int,},
+            "winningUnit": int,
+            "dividend": str
+        }],
+    },
+    "drawResult": {
+        "drawnNo": List[int],  # e.g. [1, 5, 12, 23, 34, 45]
+        "xDrawnNo": int,      # e.g. 7
+    }
+}
+"""
 
 
 def get_ball_color(number: int) -> str:
